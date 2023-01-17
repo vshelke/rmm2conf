@@ -1,13 +1,11 @@
-import './App.css';
-import QRScanner from './QRScanner';
+import QRScanner from "./components/QRScanner";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+      <div className="card rounded-2xl m-10">
+        <h2 className="text-center text-5xl font-bold pb-10 text-stone-600">Scan QR Code</h2>
         <QRScanner />
-      </header>
-    </div>
+      </div>
   );
 }
 
