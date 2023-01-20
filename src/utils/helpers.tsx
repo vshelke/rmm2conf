@@ -75,7 +75,7 @@ export const getChipsMap = (scanStatus: string, dataStatus: string, error?: Erro
       icon: <DataObjectRoundedIcon />,
     },
     valid: {
-      label: "QR Code Valid",
+      label: "QR Valid",
       color: "success",
       icon: <VerifiedRoundedIcon />,
     },

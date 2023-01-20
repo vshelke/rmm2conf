@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 
 export interface IGreetings {
   className?: string
@@ -11,9 +10,9 @@ const Greetings: React.FC<IGreetings> = ({ className }) => {
   return (
     <Card className={className}>
       <CardContent>
-        <Typography className="font-semibold text-xl">
+        <h2 className="font-semibold text-xl">
           Visitor Onboarding
-        </Typography>
+        </h2>
       </CardContent>
       <div></div>
     </Card>
