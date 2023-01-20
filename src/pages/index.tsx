@@ -1,10 +1,15 @@
-import styles from '@/styles/Home.module.css'
-
+import Greetings from "@/components/Greetings";
+import ScanOperation from "@/components/ScanOperation";
+import VisitorDetails from "@/components/VisitorDetails";
+import EventAction from "@/components/EventAction";
 
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <div>
+      <Greetings className="m-5"/>
+      <ScanOperation className="m-5"/>
+      <VisitorDetails />
+      <EventAction />
+    </div>
+  );
 }
