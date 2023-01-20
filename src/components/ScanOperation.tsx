@@ -10,7 +10,7 @@ import { getChipsMap, getStatus } from "@/utils/helpers";
 
 export interface IScanOperation {
   className?: string;
-  onParsedData: (data: object) => void;
+  onParsedData?: (data: object) => void;
 }
 
 const ScanOperation: React.FC<IScanOperation> = ({ className, onParsedData }) => {
@@ -24,7 +24,7 @@ const ScanOperation: React.FC<IScanOperation> = ({ className, onParsedData }) =>
   }, [scanner, data, error]);
 
   useEffect(() => {
-    if (dataStatus === "valid") {
+    if (dataStatus === "valid" && onParsedData) {
       const [id, timestamp] = atob(data).split("-");
       onParsedData({id, timestamp});
     }
