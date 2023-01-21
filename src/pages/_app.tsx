@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import { createClient, Provider } from "urql";
 
 const client = createClient({
-  url: "http://165.232.177.9/v1/graphql",
+  url: "https://hasura.kinescope.systems/v1/graphql",
   fetchOptions: () => {
     return {
       headers: { "x-hasura-admin-secret": "ioywegbhjlksdhnfuipq" },
