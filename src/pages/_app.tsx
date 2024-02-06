@@ -4,10 +4,10 @@ import type { AppProps } from "next/app";
 import { createClient, Provider } from "urql";
 
 const client = createClient({
-  url: "https://hasura.kinescope.systems/v1/graphql",
+  url: "https://trusting-civet-35.hasura.app/v1/graphql",
   fetchOptions: () => {
     return {
-      headers: { "x-hasura-admin-secret": "ioywegbhjlksdhnfuipq" },
+      headers: { "x-hasura-admin-secret": "do5675mitMiR50aIxNs1rUjLwddC4b76eO6f2m3NbTS9A5gGz8chrf8aG5a41xKK" },
     };
   },
 });

@@ -18,7 +18,7 @@ export interface IVisitorDetails {
 }
 
 const GetVisitorDetailsQuery = `
-query GetVisitorDetails($reference_id: String!) {
+query GetVisitorDetails($reference_id: Int!) {
   visitor(where: {
     reference_id: {_eq: $reference_id}
   }) {
@@ -33,12 +33,11 @@ query GetVisitorDetails($reference_id: String!) {
     institute
     address
     mobile
-    mmc_registration
     has_attended
   }
 }`;
 const AdmitVisitorMutation = `
-mutation AdmitVisitor($id: uuid!) {
+mutation AdmitVisitor($id: Int!) {
   update_visitor_by_pk(pk_columns: {id: $id}, _set: {has_attended: true}) {
     id
     has_attended
